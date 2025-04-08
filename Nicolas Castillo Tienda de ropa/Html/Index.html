@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categoría - Rimberio Cinema</title>
+  <link rel="stylesheet" href="../Styles/Styles.css" />
+  
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const productosGrupos = document.querySelectorAll(".productos");
+  
+      productosGrupos.forEach(grupo => {
+        grupo.classList.add("animar");
+        const productos = grupo.querySelectorAll(".producto");
+        productos.forEach((producto, index) => {
+          setTimeout(() => {
+            producto.classList.add("animar");
+            const img = producto.querySelector("img");
+            if (img) img.classList.add("animar");
+          }, index * 150);
+        });
+      });
+    });
+  </script>
+<body>
+  <header class="encabezado">
+    <div class="logo">
+      <img src="../IMG/Logogogo.png" alt="Rimberio Cinema" />
+      <span>RIMBERIO CINEMA</span>
+    </div>
+    <nav class="nav-categoria">CATEGORIA</nav>
+  </header>
+
+  <main>
+    <h1 class="titulo">CATEGORIA</h1>
+
+    <section class="grupo-productos">
+      <h2>JURASSIC PARK</h2>
+      <div class="productos">
+        <div class="producto">
+          <img src="../IMG/Saco Jurassic Park.webp" alt="Saco Jurassic Park" />
+          <div class="info">
+            <p>Saco<br>Algodón<br>1993<br>23 unidades existentes</p>
+            <p class="precio">$95.900</p>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="../IMG/Camiseta Jurassic Park.webp" alt="Camiseta Jurassic Park" />
+          <div class="info">
+            <p>Camiseta<br>Algodón<br>2000<br>10 unidades existentes</p>
+            <p class="precio">$65.900</p>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="../IMG/Zapatos J-P.jpg" alt="Zapatillas Jurassic Park" />
+          <div class="info">
+            <p>Zapatillas<br>Sintetico<br>1997<br>7 unidades existentes</p>
+            <p class="precio">$12.000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grupo-productos">
+      <h2>Star Wars</h2>
+      <div class="productos">
+        <div class="producto">
+          <img src="../IMG/Saco SW.webp" alt="Saco Star Wars" />
+          <div class="info">
+            <p>Saco<br>Algodón<br>2005<br>23 unidades existentes</p>
+            <p class="precio">$95.900</p>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="../IMG/Camiseta SW.avif" alt="Camiseta Star Wars" />
+          <div class="info">
+            <p>Camiseta<br>Algodón<br>2005<br>23 unidades existentes</p>
+            <p class="precio">$55.900</p>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="../IMG/Pantalon SW.jpeg" alt="Pantalón Star Wars" />
+          <div class="info">
+            <p>Pantalón<br>Algodón<br>2021<br>23 unidades existentes</p>
+            <p class="precio">$73.900</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="redes">
+      <a href="https://www.facebook.com/"><img src="../IMG/Facebook_Logo.webp" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/?hl=en"><img src="../IMG/Instagram.webp" alt="Instagram" /></a>
+    </div>
+    <div class="contacto">
+      <p>Correo: rimberio@gmail.com</p>
+      <p>Teléfono: 3572850537</p>
+    </div>
+    <div class="condiciones">Se aplican términos y condiciones.</div>
+  </footer>
+</body>
+</html>
